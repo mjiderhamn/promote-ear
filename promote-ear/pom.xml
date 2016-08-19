@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>promote-parent</artifactId>
+    <groupId>se.jiderhamn</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>promote-ear</artifactId>
+  <packaging>ear</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>se.jiderhamn</groupId>
+      <artifactId>promote-jar</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <configuration>
+          <modules>
+            <jarModule>
+              <groupId>se.jiderhamn</groupId>
+              <artifactId>promote-jar</artifactId>
+              <bundleDir>lib</bundleDir>
+            </jarModule>
+          </modules>
+          <filtering>true</filtering>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>se.jiderhamn</groupId>
+        <artifactId>promote-maven-plugin</artifactId>
+        <version>1.0.2</version>
+        <!-- Automatically execute promote:make-promotable after each snapshot build -->
+        <executions>
+          <execution>
+            <goals>
+              <goal>make-promotable</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
