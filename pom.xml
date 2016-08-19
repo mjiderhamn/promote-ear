@@ -13,5 +13,11 @@
     <module>promote-ear</module>
   </modules>
 
+  <scm>
+    <connection>scm:git:git@github.com:mjiderhamn/promote-ear.git</connection>
+    <developerConnection>scm:git:git@github.com:mjiderhamn/promote-ear.git</developerConnection>
+    <url>https://github.com/mjiderhamn/promote-ear.git</url>
+  </scm>
+  
 
 </project>
