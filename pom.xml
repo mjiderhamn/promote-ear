@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>se.jiderhamn</groupId>
   <artifactId>promote-ear</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>ear</packaging>
 
   <scm>
     <connection>scm:git:git@github.com:mjiderhamn/promote-ear.git</connection>
     <developerConnection>scm:git:git@github.com:mjiderhamn/promote-ear.git</developerConnection>
     <url>https://github.com/mjiderhamn/promote-ear.git</url>
-    <tag>promote-ear-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
